@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0070f3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0051a8;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-text {
+            flex: 1;
+        }
+
+        .task-text.completed {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .actions button {
+            padding: 5px 10px;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+
+        .btn-toggle {
+            background-color: #28a745;
+        }
+
+        .btn-toggle:hover {
+            background-color: #218838;
+        }
+
+        .btn-delete {
+            background-color: #dc3545;
+        }
+
+        .btn-delete:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Task Manager</h1>
+
+    <div class="form-group">
+        <input type="text" id="task-input" placeholder="Enter a new task...">
+        <button onclick="createTask()">Add Task</button>
+    </div>
+
+    <ul id="task-list" class="task-list">
+    </ul>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
